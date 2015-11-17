@@ -1,0 +1,48 @@
+package org.drools.test;
+
+import org.drools.test.Message;
+
+
+
+rule "Ejecucion Grupo A"
+ruleflow-group "GrupoA"
+    when
+        $o: Message()
+    then
+    	System.out.println(Thread.currentThread().getName() + " RN - " + drools.getRule().getName() + "/" + drools.getRule().getAgendaGroup() + " [" + $o.toString() + "]");
+    	//System.out.println("RN - " + drools.getRule().getName() + ", SA - " + drools.getRule().getSalience() + ", AG - " + drools.getRule().getAgendaGroup() + ", O : " + o.getMessasge());
+end
+
+rule "Ejecucion Grupo B"
+ruleflow-group "GrupoB"
+    when
+        $o: Message()
+    then
+    	System.out.println(Thread.currentThread().getName() + " RN - " + drools.getRule().getName() + "/" + drools.getRule().getAgendaGroup() + " [" + $o.toString() + "]");
+    	//System.out.println("RN - " + drools.getRule().getName() + ", SA - " + drools.getRule().getSalience() + ", AG - " + drools.getRule().getAgendaGroup() + ", O : " + o.getMessasge());
+end
+
+/*
+rule "My First Drools Rule3"
+    when
+        eval(true)
+    then
+    	System.out.println("Rule Name is - " + drools.getRule().getName());
+        System.out.println("Rule Salience is - " + drools.getRule().getSalience());
+        System.out.println("Rule Agenda group is - " + drools.getRule().getAgendaGroup());
+        //System.out.println(" >>> Rule Fired for Object: "+$o.toString());
+        //delete($o);
+end
+
+rule "My First Drools Rule"
+	ruleflow-group "GrupoA"
+    when
+        eval(true)
+    then
+    	System.out.println("Rule Name is - " + drools.getRule().getName());
+        System.out.println("Rule Salience is - " + drools.getRule().getSalience());
+        System.out.println("Rule Agenda group is - " + drools.getRule().getAgendaGroup());
+        //System.out.println(" >>> Rule Fired for Object: "+$o.toString());
+        //delete($o);
+end
+*/
