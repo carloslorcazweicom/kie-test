@@ -10,7 +10,9 @@
 
 - src/main/resources/rules.drl: Contiene 2 grupos de reglas 'GrupoA' y 'GrupoB' las cuales realizan un print de la regla y se activan con objeto de tipo Message.
 
-# Pruebas, se agrega un AgendaEventListener el cual realiza un "fireAllRules" ante el evento "afterRuleFlowGroupActivated"; ademas se agrega un ProcessEventListener el cual se encarga de insertar el hecho WorkflowProcessInstance correspondiente al proceso en el evento "beforeNodeTriggered" y la posterior retractacion del hecho en el evento "beforeNodeLeft".
+# Pruebas 
+
+Se agrega un AgendaEventListener el cual realiza un "fireAllRules" ante el evento "afterRuleFlowGroupActivated"; ademas se agrega un ProcessEventListener el cual se encarga de insertar el hecho WorkflowProcessInstance correspondiente al proceso en el evento "beforeNodeTriggered" y la posterior retractacion del hecho en el evento "beforeNodeLeft".
 
 - src/test/java/org/drools/test/RulesJUnitTest.java : (mvn clean test -Dtest=RulesJUnitTest) Levanta un proceso "AB" y un proceso "BA" de forma concurrente; dos veces.
 
