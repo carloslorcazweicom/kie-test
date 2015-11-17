@@ -42,7 +42,7 @@ import org.kie.api.runtime.rule.FactHandle;
 @RunWith(Arquillian.class)
 public class RulesJUnitTest extends TestCase {
 
-	private static final int THREADS = 1;
+	private static final int THREADS = 5;
 	
 	private static final int PROCESS = 1;
 	
@@ -123,7 +123,7 @@ public class RulesJUnitTest extends TestCase {
 		
 		
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(THREADS * 2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
